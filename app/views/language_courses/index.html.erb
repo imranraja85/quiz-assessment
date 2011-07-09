@@ -1,0 +1,9 @@
+<%= stylesheet_link_tag 'rest/language_courses' %>
+
+<h1>Language Course Listing</h1>
+<dl id="language-course-listing">
+  <% @language_courses.each do |language_course| %>
+    <dt><%= language_course.language_name %></dt>
+    <dd><%= link_to "Start Assessment", assessment_language_course_path(language_course) %></dd>
+  <% end %>
+</dl>

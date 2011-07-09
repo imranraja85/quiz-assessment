@@ -1,0 +1,15 @@
+<%= stylesheet_link_tag 'rest/language_courses' %>
+<h2> <%= @language_course.language_name %> Course Assessment</h2>
+
+<div id="questions-container">
+  <%= form_tag evaluate_assessment_language_courses_path do %>
+    <% @quiz_questions.each_with_index do |quiz_question, index| %>
+      <div class="question">
+        <span class="question-header">Question <%= index+1 %></span><br/>
+        <span class="actual-question"><%= quiz_question.question %></span><br/>
+        <%= prepare_question_choices(quiz_question) %><br/>
+      </div>
+    <% end %>
+    <%= submit_tag "Evaluate my assessment" %>
+  <% end %>
+</div>

@@ -1,0 +1,23 @@
+<%= stylesheet_link_tag 'rest/language_courses' %>
+
+<div id="assessment-result">
+  <div class="floatL" id="assessment-score">
+    <span class="weak-grey uppercase">total score</span><br/>
+    <span class="popping-green"><%= @result[:correct_answers].size %> / 50</span>
+  </div>
+  <div id="assessment-comment">
+    <%= display_assessment_comment(@result[:correct_answers].size) %>
+  </div>
+  <% if @result[:incorrect_answers].size > 0 %>
+    <hr/>
+    <h2>Review the questions you got wrong</h2>
+    <div id="questions-container">
+      <% @result[:incorrect_answers].each do |i| %>
+        <div class="question">
+          Question: <span class="actual-question"><%= i.question %></span><br/>
+          Answer: <span class="actual-answer"><%= i.answer %></span>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

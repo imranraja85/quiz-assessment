@@ -1,0 +1,15 @@
+/* Index */
+#language-course-listing {width: 180px}
+#language-course-listing dt {float:left}
+#language-course-listing dd {text-align:right;padding-bottom:5px}
+
+/* Assessment */
+#questions-container {width: 80%; margin: auto}
+.question {-moz-border-radius: 7px;-webkit-border-radius: 7px;width:640px; padding: 10px; background-color: #F8F8F8; height: 190px; margin-bottom: 5px; border: 1px solid #eaeaea}
+.question .question-header {color:#919791; text-transform: uppercase;}
+.question .actual-question {font-size: 18px; color: #eeac1e; font-family: 'Times';}
+
+/* Evaluate Assessment */
+#assessment-score {padding-right: 40px}
+#assessment-result {width: 100%; padding: 10px; background-color: #ffffff; margin: auto}
+#assessment-comment {font-size: 30px;padding-top:20px}
